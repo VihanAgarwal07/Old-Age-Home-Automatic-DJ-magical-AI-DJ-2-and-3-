@@ -26,10 +26,15 @@ function modelLoaded(){
 function gotPoses(event){
 console.log(event);
 if(event.length>0){
-    //leftWristX=
+    leftWristX=event[0].pose.leftWrist.x;
+    leftWristy=event[0].pose.leftWrist.y;
+    
+    rightWristX=event[0].pose.rightWrist.x;
+    rightWristy=event[0].pose.rightWrist.y;
 }
 }
 
 function draw(){
     image(video,0,0,700,500);
+    
 }
